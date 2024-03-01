@@ -1,32 +1,25 @@
-let manuIcon = document.querySelector('#menu-icon');
+let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
-let sections = document.querySelectorAll('sections');
+let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
-
-
 window.onscroll = () => {
-    sections.forEeach(sec => {
+    sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 150;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-
         if (top >= offset && top < offset + height) {
-            navLinks.forEeach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a
-                [href *= ' + id + ']').classList.add
-                    ('active')
-            })
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector('header nav a[href*="' + id + '"]').classList.add('active');
         }
+    });
+};
 
-
-    })
-}
 menuIcon.onclick = () => {
-    nemuIcon.classList.toggle('bx-x');
+    menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
-
-}
+};
