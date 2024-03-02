@@ -127,16 +127,17 @@
     <section class="contact" id="Contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="#">
+        <form action="form.php" method="POST">
             <div class=" input-box">
-                <input type="text" placeholder="enter your name">
-                <input type="email" placeholder="enter your email">
+                <input type="text" placeholder="enter your name" name="Name">
+                <input type="email" placeholder="enter your email" name="Email"> 
 
             </div>
             <div class="input-box">
-                <input type="number" placeholder="enter your number">
+                <input type="number" placeholder="enter your number" name="Number" >
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="your message"></textarea>
+            <!-- <textarea name="Message" placeholder="Message"></textarea> -->
+             <textarea name="" id="" cols="30" rows="10" placeholder="your message" name="Message"></textarea>
             <input type="submit" value="send massage" class="btn">
         </form>
     </section>
